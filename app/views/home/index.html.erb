@@ -10,6 +10,4 @@
 
 <h2>List of Most Abandoned Checkouts</h2>
 
-    <% @abandonedCheckouts.each do |abandonedCheckout| %>
-    <input type="checkbox" name="@abandonedCheckout.customer.first_name"><%= link_to abandonedCheckout.id, "{@abandonedCheckout.abandoned_checkout_url}" %> </br>
-  <% end %>
+
