@@ -7,12 +7,9 @@
   </script>
 <% end %>
 
-Your Segement Write Key (Can Be Found at Dashboard > Sources > Settings > Keys > Write Key) <input type="text" id="writeKey">
-</br>
-<h2>Which Pages Would you Like to Add Segment Tracking To?</h2>
 
-<form>
-    <input type="checkbox" id="blogPosts">Blog Posts
-    <input type="checkbox" id="productPages">Product Pages
-    <input type="checkbox" id="collectionPages">Collection Pages
-</form>
+<h2>List of Most Abandoned Checkouts</h2>
+
+    <% @abandonedCheckouts.each do |abandonedCheckout| %>
+    <input type="checkbox" name="@abandonedCheckout.customer.first_name"><%= link_to abandonedCheckout.id, "{@abandonedCheckout.abandoned_checkout_url}" %> </br>
+  <% end %>

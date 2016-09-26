@@ -1,5 +1,5 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
-    ShopifyAPI::ScriptTag.create(:event => "onload", :src => "http://ibrahimitani.com/dash-app.js")
+    @abandonedCheckouts = ShopifyAPI::AbandonedCheckout.find(:all, params: { limit: 10 })
   end
 end
