@@ -9,14 +9,10 @@
   </script>
 <% end %>
 
-<h2>Products</h2>
+<h2>Articles</h2>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
-  <% end %>
-
+<form>
     <% @articles.each do |article| %>
-    <li><%= link_to article.title, "https://#{@shop_session.url}/admin/blogs/#{article.blog_id}/articles/#{article.id}", target: "_top" %></li>
+    <input type="checkbox" name="@article.title"><%= link_to article.title, "https://#{@shop_session.url}/admin/blogs/#{article.blog_id}/articles/#{article.id}", target: "_top" %></li>
   <% end %>
-</ul>
+</form>
