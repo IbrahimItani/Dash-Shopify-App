@@ -1,6 +1,6 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
     @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
-    @orders = ShopifyAPI::Order.find(:all, params: {limit: 5})
+    @orders = ShopifyAPI::Order.find(:all, params: {limit: 5, :order => "subtotal_price ASC"})
   end
 end
