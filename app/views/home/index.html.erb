@@ -11,7 +11,7 @@
 <h2>List of Your Biggest Orders</h2>
 
 
-{% @orders | sort: 'total_price' %}
+<% @orders | sort: 'total_price' %>
 <% @orders.each do |order| %>
     <li><%= link_to order.name, "https://#{@shop_session.url}/admin/orders/#{order.id}", target: "_top" %> - $<%= order.total_price %> </li>
 <% end %>
