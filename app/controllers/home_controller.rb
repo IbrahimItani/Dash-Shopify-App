@@ -1,6 +1,6 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
-    @orders = ShopifyAPI::Order.find(:all, :order => "subtotal_price ASC")
+    @orders = ShopifyAPI::Order.find(:all, :order => 'orders.subtotal_price DESC')
 
   end
 end
