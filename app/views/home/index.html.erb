@@ -2,17 +2,17 @@
   <script type="text/javascript">
     ShopifyApp.ready(function(){
       ShopifyApp.Bar.initialize({
-        title: "Home",
-        icon: "<%= asset_path('favicon.jpg') %>"
-      });
+        title: "Home"      });
     });
   </script>
 <% end %>
 
-<h2>Articles</h2>
+Your Segement Write Key (Can Be Found at Dashboard > Sources > Settings > Keys > Write Key) <input type="text" id="writeKey">
+</br>
+<h2>Which Pages Would you Like to Add Segment Tracking To?</h2>
 
 <form>
-    <% @articles.each do |article| %>
-    <input type="checkbox" name="@article.title"><%= link_to article.title, "https://#{@shop_session.url}/admin/blogs/#{article.blog_id}/articles/#{article.id}", target: "_top" %></li>
-  <% end %>
+    <input type="checkbox" id="blogPosts">Blog Posts
+    <input type="checkbox" id="productPages">Product Pages
+    <input type="checkbox" id="collectionPages">Collection Pages
 </form>

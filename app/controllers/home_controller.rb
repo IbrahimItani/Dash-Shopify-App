@@ -1,5 +1,5 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
-    @articles = ShopifyAPI::Article.find(:all)
+    ShopifyAPI::ScriptTag.create({event: "onload", src: "https://test-dash-app.herokuapp.com/assets/javascripts/dash-app.js";}) 
   end
 end
