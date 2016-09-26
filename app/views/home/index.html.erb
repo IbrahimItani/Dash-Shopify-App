@@ -16,5 +16,5 @@
   <% end %>
 
 <% @orders.each do |order| %>
-    <li>{order.subtotal_price}</li>
+    <li><%= link_to order.name, "https://#{@shop_session.url}/admin/orders/#{order.id}", target: "_top" %></li>
   <% end %>
