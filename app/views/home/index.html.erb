@@ -17,6 +17,6 @@
   <% end %>
 
     <% @articles.each do |article| %>
-    <li><%= link_to article.title, "https://#{@shop_session.url}/admin/blogs/#{article.blog_id}/articles/#{article.id}", target: "_top" %></li>
+    
   <% end %>
 </ul>
