@@ -1,7 +1,10 @@
-# Dash - Simple Ruby on Rails Shopify Top Orders App
+# Dash - Simple Shopify Top Orders App
 
-[Test It Out Here](https://apps.shopify.com/dash-simple-analytics)
-
+Built With Ruby on Rails
 Used [shopify-app](https://github.com/Shopify/shopify_app) for app scaffold.
 
-**NOTE: Environment Variables api_key & secret values removed for security reasons
+[>>Test It Out Here](https://apps.shopify.com/dash-simple-analytics)
+
+*NOTE: Environment Variables api_key & secret values removed for security reasons*
+
+
